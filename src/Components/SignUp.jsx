@@ -3,12 +3,26 @@ import { useState } from "react";
 import { signUp } from "../utils/fetch";
 
 
-
-const SignUpPage = ({ handleChange, handleSubmit }) => {
+const SignUpPage = () => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  const handleChange = (e, setState) => {
+    setState(e.target.value);
+  };
+
+  const handleSubmit = async (e, signUp, username, email, password) => {
+    e.preventDefault();
+    try {
+      const response = await signUp(username, email, password);
+
+      console.log("Sign-up successful!", response);
+    } catch (error) {
+      
+      console.error("Sign-up failed.", error);
+    }
+  };
 
   return (
     <div className="mainContainer">
