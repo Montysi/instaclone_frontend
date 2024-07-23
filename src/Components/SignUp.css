@@ -1,0 +1,30 @@
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 90vh;
+    
+    
+}
+
+/* .SignUpContainer {
+    border: 2px solid red;
+    background-color: white;
+    width: 50vh;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+} */
+
+.signUpContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid red;
+    width: 50vh;
+
+}
