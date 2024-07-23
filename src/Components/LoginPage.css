@@ -1,0 +1,57 @@
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 90vh;
+    
+    
+}
+
+.loginContainer {
+    border: 2px solid red;
+    background-color: white;
+    width: 50vh;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+}
+
+.loginInputContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid red;
+    width: 50vh;
+
+}
+
+.loginInput {
+    width: 30vh;
+    height: 2vh;
+    margin: 5px;
+}
+
+#loginButton {
+    width: 30vh;
+    height: 2vh;
+    margin: 5px;
+    background-color: rgb(0, 102, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    
+}
+
+.signUpQueryContainer {
+    border: 2px solid red;
+    background-color: white;
+    width: 50vh;
+}
+
+h1 {
+    color: black;
+}
