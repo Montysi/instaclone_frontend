@@ -38,3 +38,5 @@ const ImageContainer = ({ isLoggedIn }) => {
     )
 
 };
+
+export default ImageContainer;
