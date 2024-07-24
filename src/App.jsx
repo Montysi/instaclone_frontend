@@ -7,7 +7,7 @@ import Layout from './Components/layout/Layout';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [loggedUser, setLoggedUser] = useState(false);
+  const [loggedUser, setLoggedUser] = useState("");
 
   const logOrSignSetters = {
     isLoggedIn,
@@ -22,7 +22,7 @@ function App() {
         {isLoggedIn ? (
           <ImageContainer isLoggedIn={isLoggedIn} />
         ) : (
-          <LoginPage />
+          <LoginPage logOrSignSetters={logOrSignSetters}/>
         )}
       </Layout>
     </div>

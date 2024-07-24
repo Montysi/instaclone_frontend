@@ -6,13 +6,15 @@ const ImageContainer = ({ isLoggedIn }) => {
 
 
     useEffect(() => {
+      if (isLoggedIn) {
         async function fetchImages() {
-            const data = await imageUseEffect();
-            console.log(data);
-            await setImages(data.images);
+          const data = await imageUseEffect();
+          console.log(data);
+          setImages(data.images);
         }
 
         fetchImages();
+      }
     }, [isLoggedIn]);
 
     const imageUseEffect = () => {
@@ -30,12 +32,16 @@ const ImageContainer = ({ isLoggedIn }) => {
     };
 
     return (
-        <div className="image-column-container">
-            <div className="image-row-container">
-                {images.length >= 1 }
+      <div className="image-column-container">
+        <div className="image-row-container">
+          {images.map((img) => (
+            <div key={img.id} className="image-item">
+              {img.image}
             </div>
+          ))}
         </div>
-    )
+      </div>
+    );
 
 };
 
