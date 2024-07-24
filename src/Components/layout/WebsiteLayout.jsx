@@ -3,7 +3,7 @@ import React from "react";
 import Header from "../header/Header";
 import Footer from "../footer/Footer";
 
-import "./Layout.css";
+import "./WebsiteLayout.css";
 
 const Layout = ({ children, loggedUser }) => {
   return (

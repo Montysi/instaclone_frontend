@@ -3,7 +3,7 @@ import './App.css'
 import LoginPage from './Components/LoginPage';
 import SignUpPage from './Components/SignUp';
 import ImageContainer from './Components/ImageContainer';
-import Layout from './Components/layout/Layout';
+import Layout from './Components/layout/WebsiteLayout';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -18,13 +18,13 @@ function App() {
 
   return (
     <div className="flex flex-column container">
-      <Layout loggedUser={loggedUser}>
+      <WebsiteLayout loggedUser={loggedUser}>
         {isLoggedIn ? (
           <ImageContainer isLoggedIn={isLoggedIn} />
         ) : (
           <LoginPage logOrSignSetters={logOrSignSetters}/>
         )}
-      </Layout>
+      </WebsiteLayout>
     </div>
   );
 }
