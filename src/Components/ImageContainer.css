@@ -1,0 +1,20 @@
+.image-column-container {
+    display: flex;
+    justify-content: center;
+    width: 50vh;
+    border: 2px solid red;
+}
+
+.image-item {
+    border: 2px solid red;
+}
+
+.bulldog-img {
+    width: 50%;
+    height: 50%;
+}
+
+.kitten-img {
+    width: 50%;
+    height: 50%;
+}

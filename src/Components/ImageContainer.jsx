@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import "./ImageContainer.css";
+import bulldog from "../assets/bulldog-1047518_1280.jpg";
+import kitten from "../assets/kitty-cat-kitten-pet-45201.jpeg"
 
 const ImageContainer = ({ isLoggedIn }) => {
   const [images, setImages] = useState([]);
@@ -21,12 +23,30 @@ const ImageContainer = ({ isLoggedIn }) => {
         console.log("useEffect in ImageContainer working");
         return {
           images: [
-            { id: 1, image: "This is a cat" },
-            { id: 2, image: "This is a dog" },
-            { id: 3, image: "This is a duck" },
-            { id: 4, image: "This is a monkey" },
-            { id: 5, image: "This is a hedgehog" },
-            { id: 6, image: "This is a badger" },
+            {
+              id: 1,
+              image: <img src={bulldog} className="bulldog-img" />,
+            },
+            {
+              id: 2,
+              image: <img src={kitten} className="kitten-img" />,
+            },
+            {
+              id: 3,
+              image: <img src={bulldog} className="bulldog-img" />,
+            },
+            {
+              id: 4,
+              image: <img src={kitten} className="kitten-img" />,
+            },
+            {
+              id: 5,
+              image: <img src={bulldog} className="bulldog-img" />,
+            },
+            {
+              id: 6,
+              image: <img src={kitten} className="kitten-img" />,
+            },
           ],
         };
     };
@@ -37,6 +57,7 @@ const ImageContainer = ({ isLoggedIn }) => {
           {images.map((img) => (
             <div key={img.id} className="image-item">
               {img.image}
+              <h2>Hello</h2>
             </div>
           ))}
         </div>

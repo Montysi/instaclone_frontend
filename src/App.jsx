@@ -3,7 +3,7 @@ import './App.css'
 import LoginPage from './Components/LoginPage';
 import SignUpPage from './Components/SignUp';
 import ImageContainer from './Components/ImageContainer';
-import Layout from './Components/layout/WebsiteLayout';
+import WebsiteLayout from './Components/layout/WebsiteLayout';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);

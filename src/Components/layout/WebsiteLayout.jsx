@@ -5,7 +5,7 @@ import Footer from "../footer/Footer";
 
 import "./WebsiteLayout.css";
 
-const Layout = ({ children, loggedUser }) => {
+const WebsiteLayout = ({ children, loggedUser }) => {
   return (
     <div className="layout">
       <Header loggedUser={loggedUser} />
@@ -15,4 +15,4 @@ const Layout = ({ children, loggedUser }) => {
   );
 };
 
-export default Layout;
+export default WebsiteLayout;
