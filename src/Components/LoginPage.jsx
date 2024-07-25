@@ -18,7 +18,7 @@ const LoginPage = ({ logOrSignSetters}) => {
 
       console.log("login successful!", response);
       setIsLoggedIn(true);
-      setLoggedUser(username);
+      setLoggedUser({username});
     } catch (error) {
       console.error("login failed.", error);
     }

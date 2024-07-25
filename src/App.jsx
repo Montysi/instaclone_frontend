@@ -8,7 +8,7 @@ import WebsiteLayout from './Components/layout/WebsiteLayout';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [loggedUser, setLoggedUser] = useState("");
+  const [loggedUser, setLoggedUser] = useState(null);
   const [images, setImages] = useState([]);
 
   const fetchData = async () => {
