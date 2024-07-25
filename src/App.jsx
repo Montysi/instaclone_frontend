@@ -2,14 +2,31 @@ import { useState } from 'react'
 import './App.css'
 import LoginPage from './Components/LoginPage';
 import SignUpPage from './Components/SignUp';
+import ImageContainer from './Components/ImageContainer';
+import WebsiteLayout from './Components/layout/WebsiteLayout';
 
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [loggedUser, setLoggedUser] = useState("");
+
+  const logOrSignSetters = {
+    isLoggedIn,
+    setIsLoggedIn,
+    loggedUser,
+    setLoggedUser,
+  };
 
   return (
-    <>
-      <LoginPage />
-    </>
+    <div className="flex flex-column container">
+      <WebsiteLayout loggedUser={loggedUser}>
+        {isLoggedIn ? (
+          <ImageContainer isLoggedIn={isLoggedIn} />
+        ) : (
+          <LoginPage logOrSignSetters={logOrSignSetters}/>
+        )}
+      </WebsiteLayout>
+    </div>
   );
 }
 
-export default App
+export default App;

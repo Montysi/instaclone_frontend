@@ -2,7 +2,8 @@ import './LoginPage.css';
 import { useState } from "react";
 import { login } from '../utils/fetch';
 
-const LoginPage = ({}) => {
+const LoginPage = ({ logOrSignSetters}) => {
+  const { setIsLoggedIn, setLoggedUser } = logOrSignSetters;
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
@@ -16,6 +17,8 @@ const LoginPage = ({}) => {
       const response = await login(username, email, password);
 
       console.log("login successful!", response);
+      setIsLoggedIn(true);
+      setLoggedUser(username);
     } catch (error) {
       console.error("login failed.", error);
     }
@@ -53,6 +56,8 @@ const LoginPage = ({}) => {
         </div>
       </div>
     );
+
+    
 }
 
 
