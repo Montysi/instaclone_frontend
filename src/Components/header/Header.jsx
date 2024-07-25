@@ -5,11 +5,7 @@ const Header = ({ loggedUser }) => {
     <header className="header-outer-container">
       <div className="header-inner-container">
         <h2>Instagram</h2>
-        {!loggedUser ? (
-          <p></p>
-        ) : (
-          <p>Hello</p>
-        )}
+        {!loggedUser ? <p></p> : <p>Hello, {loggedUser.username} </p>}
       </div>
     </header>
   );
