@@ -1,5 +1,6 @@
 import './LoginPage.css';
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { login } from '../utils/fetch';
 
 const LoginPage = ({ logOrSignSetters}) => {
@@ -52,7 +53,7 @@ const LoginPage = ({ logOrSignSetters}) => {
         </form>
 
         <div className="signUpQueryContainer">
-          <h1>Don't have an account? Sign Up</h1>
+          <h1>Don't have an account? <Link to="/signup">Sign Up</Link></h1>
         </div>
       </div>
     );
