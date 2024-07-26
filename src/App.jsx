@@ -70,6 +70,10 @@ function App() {
               path="/signup"
               element={<SignUpPage logOrSignSetters={logOrSignSetters} />}
             />
+            <Route 
+              path="/login"
+              element={<LoginPage logOrSignSetters={logOrSignSetters} />}
+              />
           </Routes>
         </WebsiteLayout>
       </div>
