@@ -32,6 +32,7 @@ const LoginPage = ({ logOrSignSetters}) => {
           className="loginForm"
         >
           <div className="loginContainer">
+            <h2>Instagram</h2>
             <div className="loginInputContainer">
               <input
                 onChange={(e) => handleChange(e, setUsername)}
