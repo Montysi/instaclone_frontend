@@ -1,5 +1,6 @@
 import "./SignUp.css";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { signUp } from "../utils/fetch";
 
 
@@ -55,6 +56,11 @@ const SignUpPage = () => {
           <button id="SignUpButton"> Sign Up</button>
         </div>
       </form>
+
+      <div className="accountQueryContainer">
+          <h1>Already have an account?<Link to="/login">Login</Link></h1>
+        </div>
+
     </div>
   );
 };

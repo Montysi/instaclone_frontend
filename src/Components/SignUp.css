@@ -28,3 +28,9 @@
     width: 50vh;
 
 }
+
+.accountQueryContainer {
+    border: 2px solid red;
+    background-color: white;
+    width: 50vh;
+}

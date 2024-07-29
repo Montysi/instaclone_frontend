@@ -39,8 +39,7 @@ function App() {
 
   useEffect(() => {
     if (isLoggedIn) {
-      // fetchData();
-      console.log("useEffect is working");
+      fetchData();  // CSS Issue - when images are dusplayed, header/login message does not show
     }
   }, [isLoggedIn]);
 
@@ -52,15 +51,32 @@ function App() {
   };
 
   return (
-    <div className="flex flex-column container">
-      <WebsiteLayout loggedUser={loggedUser}>
-        {isLoggedIn ? (
-          <ImageContainer isLoggedIn={isLoggedIn} images={images} />
-        ) : (
-          <LoginPage logOrSignSetters={logOrSignSetters}/>
-        )}
-      </WebsiteLayout>
-    </div>
+    <Router>
+      <div className="flex flex-column container">
+        <WebsiteLayout loggedUser={loggedUser}>
+          <Routes>
+            <Route
+              path="/"
+              element={
+                isLoggedIn ? (
+                  <ImageContainer isLoggedIn={isLoggedIn} images={images} />
+                ) : (
+                  <LoginPage logOrSignSetters={logOrSignSetters} />
+                )
+              }
+            />
+            <Route
+              path="/signup"
+              element={<SignUpPage logOrSignSetters={logOrSignSetters} />}
+            />
+            <Route 
+              path="/login"
+              element={<LoginPage logOrSignSetters={logOrSignSetters} />}
+              />
+          </Routes>
+        </WebsiteLayout>
+      </div>
+    </Router>
   );
 }
 
