@@ -39,8 +39,7 @@ function App() {
 
   useEffect(() => {
     if (isLoggedIn) {
-      // fetchData();
-      console.log("useEffect is working");
+      fetchData();  // CSS Issue - when images are dusplayed, header/login message does not show
     }
   }, [isLoggedIn]);
 
